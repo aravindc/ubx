@@ -1,8 +1,12 @@
-# 784632ee-e66f-4f6f-ab1b-e9c9c0d47cf8:US
-# https://api-01.ubx.ibmmarketingcloud.com/v1/endpoint
-# https://api-01.ubx.ibmmarketingcloud.com/v1/application
-
 import requests
+import logging
+import configparser
+
+logging.basicConfig(level=logging.DEBUG)
+logger = logging.getLogger(__name__)
+
+config = configparser.RawConfigParser()
+config.read('config.properties')
 
 # Register ADP Endpoint to consume data from ACP-Saas
 auth_param = '784632ee-e66f-4f6f-ab1b-e9c9c0d47cf8:US'
